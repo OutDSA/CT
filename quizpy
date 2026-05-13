@@ -1,0 +1,64 @@
+question =[
+    {
+        "questions":"1. What is the capital of France?",
+        "option":["A) Berlin" ,"B) Madrid","C) Paris","D) Rome"],
+        "ANS":"C"
+    },
+    {
+        "questions":"2. Which planet is known as the Red Planet?",
+        "option":["A) Venus","B) Mars","C) Jupiter","D) Saturn"],
+        "ANS":"B"
+    },
+    {
+        "questions":"3. Who wrote the play Romeo and Juliet?",
+        "option":["A) Charles Dickens","B) William Shakespeare","C) Jane Austen","D) Mark Twain"],
+        "ANS":"B"
+    },
+    {
+        "questions":"4. What is the largest ocean on Earth?",
+        "option":["A) Indian Ocean","B) Atlantic Ocean","C) Arctic Ocean","D) Pacific Ocean"],
+        "ANS":"D"
+    },
+    {
+        "questions":"5. What is the chemical symbol for Gold?",
+        "option":["A) Go","B) Au","C) Ag","D) Gd"],
+        "ANS":"B"
+    },
+    {
+        "questions":"6. Which country is home to the Great Wall?",
+        "option":["A) India","B) China","C) Japan","D) Egypt"],
+        "ANS":"B"
+    },
+     {
+        "questions":"7. How many continents are there on Earth?",
+        "option":["A)"," 5","B) 6","C) 7","D) 8"],
+        "ANS":"C"
+    },
+    {
+        "questions":"8. What is the square root of 64?",
+        "option":["A) 6","B) 7","C) 8","D) 9"],
+        "ANS":"C"
+    },
+    {
+        "questions":"9. Which gas do plants absorb from the atmosphere?",
+        "option":["A) Oxygen","B) Nitrogen","C) Carbon Dioxide","D) Hydrogen"],
+        "ANS":"C"
+    },
+    {
+        "questions":"10. Who painted the Mona Lisa?",
+        "option":["A) Vincent van Gogh","B) Pablo Picasso","C) Leonardo da Vinci","D) Michelangelo"],
+        "ANS":"C"
+    },
+]
+score=0
+print("Quiz")
+for q in question:
+    print(q["questions"])
+    for op in q["option"]:
+        print(op)
+    user_ans=input("Enter the ans")
+    if user_ans==q["ANS"]:
+        score+=1
+    else:
+        print("wrong ans")
+print(f"Final score{score}out of{len(question)}")
