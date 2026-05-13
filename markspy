@@ -1,0 +1,24 @@
+m1=int(input("enter marks of sub1:"))
+m2=int(input("enter marks of sub2:"))
+m3=int(input("enter marks of sub3:"))
+m4=int(input("enter marks of sub4:"))
+m5=int(input("enter marks of sub5:"))
+total =m1+m2+m3+m4+m5
+avg = total/5
+per = (total/500)*100
+
+if per >= 90:
+    grade="A"
+elif per >= 75:
+    grade="B"
+elif per >= 60:
+    grade="C"
+elif per >= 40:
+    grade="D"
+else:
+    grade="FAIL"
+
+print("total marks:",total)
+print("average marks:",avg)
+print("percentage",per)
+print("grade:",grade)
