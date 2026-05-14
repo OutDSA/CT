@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class DecimalConversion 
+{
+    static void convert(int num, int base) 
+    {
+        char[] digits = new char[20];
+        int i = 0;
+        while (num > 0) 
+        {
+            int rem = num % base;
+            if (rem < 10)
+            digits[i] = (char)(rem + '0');
+            else
+            digits[i] = (char)(rem - 10 + 'A');
+            num = num / base ;
+            i++;
+        }
+        for (int j = i - 1; j >= 0; j--)
+        System.out.print(digits[j]);
+    }
+    public static void main(String[] args) 
+    {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a decimal number: ");
+        int num = sc.nextInt();
+        System.out.print("Binary: ");
+        convert(num, 2);
+        System.out.print("\nOctal: ");
+        convert(num, 8);
+        System.out.print("\nHexadecimal: ");
+        convert(num, 16);
+        sc.close();
+    }
+}
